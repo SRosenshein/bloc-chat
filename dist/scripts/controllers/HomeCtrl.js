@@ -1,6 +1,6 @@
 (function(){
 	function HomeCtrl($scope, Room){
-		$scope.chatRooms = ["Room1", "Room2"];
+		$scope.chatRooms = Room.all;
 	}
 
 	angular
