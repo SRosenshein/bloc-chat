@@ -1,7 +1,7 @@
 (function(){
 	function Room($firebaseArray){
-		var ref = new Firebase("https://bloc-chat-ea6f3.firebaseio.com/");
-		var rooms = $firebaseArray(ref.child('rooms'));
+		var ref = new Firebase("https://bloc-chat-ea6f3.firebaseio.com/rooms");
+		var rooms = $firebaseArray(ref);
 
 		return {
 			all: rooms, //array of all rooms

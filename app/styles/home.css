@@ -1,11 +1,10 @@
 
 .links-container .navbar-link {
-	display: table-cell;
+	display: block;
 	position: relative;
 	color: gray;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	width: 100%;
 	cursor: pointer;
+	padding: 2% 10%;
 }
