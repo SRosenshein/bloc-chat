@@ -1,0 +1,10 @@
+
+.links-container .navbar-link {
+	display: block;
+	position: relative;
+	color: gray;
+	font-size: 1.2rem;
+	width: 100%;
+	cursor: pointer;
+	padding: 2% 10%;
+}
