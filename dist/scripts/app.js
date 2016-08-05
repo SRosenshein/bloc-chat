@@ -9,16 +9,30 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				controller: 'HomeCtrl as home',
-				templateUrl: '/templates/home.html'
+				views: {
+					'': {
+						templateUrl: '/templates/home.html',
+						controller: 'HomeCtrl as home'
+					},
+					'modal@home': {
+						templateUrl: '/templates/modal.html',
+						controller: 'ModalCtrl as modal'
+					}
+				}
 			});
+
+			/*.state('modal', {
+				url: '/modal',
+				controller: 'ModalCtrl as modal',
+				templateUrl: '/templates/modal.html'
+			});*/
 	}
 
 
 
 
 	angular
-		.module("blocChat", ["firebase", "ui.router"])
+		.module("blocChat", ["firebase", "ui.router", "ui.bootstrap"])
 		.config(config);
 
 })();
