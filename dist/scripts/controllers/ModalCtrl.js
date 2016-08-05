@@ -4,8 +4,12 @@
 		$scope.open = function(){
 			var modalInstance = $uibModal.open({
 				templateUrl: "/templates/modal.html",
-				controller: "ModalCtrl as modal",
-				size: "sm"
+				size: "sm",
+				controller: function($uibModalInstance, $scope){
+					$scope.close = function(){
+						$uibModalInstance.close();
+					};
+				}
 			});
 		};
 

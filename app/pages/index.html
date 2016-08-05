@@ -16,14 +16,14 @@
 			<li>
 				<h1>Bloc Chat</h1>
 			</li>
-			<li class="new-room-button" ui-sref="modal@home">
-				<button type="button" class="btn btn-default" ng-click="open(); clicked=true">Create Room</button>
+			<li class="new-room-button">
+				<button type="button"  ui-sref="modal@home" class="btn btn-default" ng-click="open(); clicked = !clicked">Create Room</button>
 			</li>
 			<div ui-view></div>
 		</ul>
 	</nav>
 	<section>
-		<div ng-show="clicked" ui-view="modal@home"></div>
+		<div ng-init="clicked=false" ng-show="clicked" ui-view="modal@home"></div>
 	</section>
 	
 
