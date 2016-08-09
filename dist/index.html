@@ -16,14 +16,17 @@
 			<li>
 				<h1>Bloc Chat</h1>
 			</li>
-			<li class="new-room-button">
-				<button type="button"  ui-sref="modal@home" class="btn btn-default" ng-click="open(); clicked = !clicked">Create Room</button>
+			<li class="new-room-button" ng-controller="ModalCtrl">
+				<button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
+				<p>{{test}}</p>
 			</li>
 			<div ui-view></div>
 		</ul>
 	</nav>
 	<section>
-		<div ng-init="clicked=false" ng-show="clicked" ui-view="modal@home"></div>
+		<!--<div modal-container>
+			<div ng-init="clicked=false" ng-show="clicked"></div>
+		</div>-->
 	</section>
 	
 
@@ -53,5 +56,6 @@
     <script src="/scripts/services/Room.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
 </body>
 </html>
