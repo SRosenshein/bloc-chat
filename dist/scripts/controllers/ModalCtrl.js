@@ -1,12 +1,12 @@
 (function(){
 	function ModalCtrl($scope, $uibModal){
-		$scope.test = "something";
 
 		$scope.open = function(){
-			console.log("test");
 			var modalInstance = $uibModal.open({
 				templateUrl: "/templates/modal.html",
-				controller: "ModalInstanceCtrl"
+				controller: "ModalInstanceCtrl",
+				size: "sm",
+				backdrop: "static"
 			});
 		};
 	}

@@ -11,22 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<nav class="navbar"> <!-- vertical nav bar -->
-		<ul class="nav nav-pills nav-stacked" ui-sref="home">
-			<li>
-				<h1>Bloc Chat</h1>
-			</li>
-			<li class="new-room-button" ng-controller="ModalCtrl">
-				<button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
-				<p>{{test}}</p>
-			</li>
-			<div ui-view></div>
-		</ul>
+	<nav class="navbar">
+		<div class="container-fluid"> <!-- vertical nav bar -->
+			<ul class="nav nav-pills nav-stacked" ui-sref="home">
+				<li>
+					<h1>Bloc Chat</h1>
+				</li>
+				<li class="new-room-button" ng-controller="ModalCtrl">
+					<button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
+				</li><hr class="style-one">
+				<div ui-view></div>
+			</ul>
+		</div>
 	</nav>
 	<section>
-		<!--<div modal-container>
-			<div ng-init="clicked=false" ng-show="clicked"></div>
-		</div>-->
+	
 	</section>
 	
 
