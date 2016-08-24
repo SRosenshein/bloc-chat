@@ -13,19 +13,29 @@
 <body>
 	<nav class="navbar">
 		<div class="container-fluid"> <!-- vertical nav bar -->
-			<ul class="nav nav-pills nav-stacked" ui-sref="home">
+			<ul class="nav nav-pills nav-stacked">
 				<li>
 					<h1>Bloc Chat</h1>
 				</li>
 				<li class="new-room-button" ng-controller="ModalCtrl">
 					<button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
 				</li><hr class="style-one">
-				<div ui-view></div>
+				<li class="room-links" ng-controller="HomeCtrl">
+					<div class="room-name" ng-repeat="room in chatRooms">{{room.name}}</div>
+				</li>
+				
+
+				<!--<div ui-view></div>-->
 			</ul>
 		</div>
 	</nav>
 	<section>
-	
+		<div ng-controller="ChatroomCtrl">
+			<div ng-repeat="message in messages">
+				<p><strong>{{message.username}}</strong><br>
+				{{message.content}}</p>
+			</div>
+		</div>
 	</section>
 	
 
@@ -56,5 +66,6 @@
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
+    <script src="/scripts/controllers/ChatroomCtrl.js"></script>
 </body>
 </html>
