@@ -3,7 +3,7 @@
 		return {
 			templateUrl: 'templates/directives/roomlist.html',
 			replace: true,
-			restrict: 'E',
+			restrict: 'E'
 		};
 	}
 

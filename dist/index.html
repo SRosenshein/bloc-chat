@@ -27,12 +27,8 @@
 	</nav>
 
 	<section>
-		<div ng-controller="ChatroomCtrl">
-			<div ng-repeat="message in messages">
-				<p><strong>{{message.username}}</strong><br>
-				{{message.content}}</p>
-			</div>
-		</div>
+		<chat-room></chat-room>
+		{{currentRoom.$id}}
 	</section>
 	</div>
 	
@@ -64,7 +60,7 @@
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
-    <script src="/scripts/controllers/ChatroomCtrl.js"></script>
+    <script src="/scripts/directives/chatRoom.js"></script>
     <script src="/scripts/directives/roomList.js"></script>
 </body>
 </html>

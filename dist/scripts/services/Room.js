@@ -12,6 +12,7 @@
 			},
 			getMessages: function(roomID){
 				var messages = $firebaseArray(mes.orderByChild("roomId").equalTo(roomID));
+				console.log(roomID);
 				return messages;
 			}
 		};

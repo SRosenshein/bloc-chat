@@ -1,0 +1,10 @@
+<div class="message-container">
+	<!-- Room Name -->
+	{{currentRoom.name}}
+
+	<!-- Display appropriate room's messages -->
+	<div class="message-body" ng-repeat="message in messageList">
+		<strong>{{message.username}}</strong><br>
+		{{message.content}}
+	</div>
+</div>

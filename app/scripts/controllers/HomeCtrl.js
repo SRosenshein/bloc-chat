@@ -6,8 +6,8 @@
 		$scope.messageList = [];
 		$scope.changeActiveRoom = function(room){
 			$scope.currentRoom = room;
-			$scope.messageList = Room.getMessages($scope.currentRoom.$id);
-		}
+			$scope.messageList = Room.getMessages(room.$id);
+		};
 	}
 
 	angular
