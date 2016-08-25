@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<div ng-controller="HomeCtrl">
 	<nav class="navbar">
 		<div class="container-fluid"> <!-- vertical nav bar -->
 			<ul class="nav nav-pills nav-stacked">
@@ -20,15 +21,12 @@
 				<li class="new-room-button" ng-controller="ModalCtrl">
 					<button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
 				</li><hr class="style-one">
-				<li class="room-links" ng-controller="HomeCtrl">
-					<div class="room-name" ng-repeat="room in chatRooms">{{room.name}}</div>
-				</li>
-				
-
-				<!--<div ui-view></div>-->
+				<roomList allRooms="chatRooms" activeRoom="currentRoom"></roomList>
+				<script>console.log(HomeCtrl.chatRooms);</script>
 			</ul>
 		</div>
 	</nav>
+
 	<section>
 		<div ng-controller="ChatroomCtrl">
 			<div ng-repeat="message in messages">
@@ -37,6 +35,7 @@
 			</div>
 		</div>
 	</section>
+	</div>
 	
 
 
@@ -67,5 +66,6 @@
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
     <script src="/scripts/controllers/ChatroomCtrl.js"></script>
+    <script src="/scripts/directives/roomList.js"></script>
 </body>
 </html>
