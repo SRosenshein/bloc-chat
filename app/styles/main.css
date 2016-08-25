@@ -40,11 +40,16 @@ hr.style-one {
 	font-size: 1.7em;
 }
 
-/*.nav h1, .nav .new-room-button {
-	width: 100%;
-	padding: 1% 10%;
-	font-size: 1.9rem;
-}*/
+.room-links .room-name {
+	margin: 10% 0;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.room-links .room-name:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
 
 section {
 	position: fixed;
