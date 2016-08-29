@@ -13,7 +13,7 @@ body {
 
 .navbar {
     position: fixed;
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0,0,0,0.10);
     z-index: 1;
     width: 20%;
     height: 100%;
@@ -60,3 +60,22 @@ section {
 	height: 100%;
 }
 
+.message-container h2 {
+	padding-left: 20px;
+}
+
+.message-container p{
+	margin: 0;
+}
+
+.message-body {
+	padding: 5px 10px;
+}
+
+.message-body:nth-child(even){
+	background: #CCC;
+}
+
+.message-body:nth-child(odd){
+	background: #FFF;
+}
