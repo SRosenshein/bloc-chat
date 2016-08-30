@@ -1,8 +1,10 @@
 (function(){
 	function UserModalCtrl($scope, $uibModalInstance, $cookies){
 		$scope.confirm = function(username){
-			$cookies.put('blocChatCurrentUser', username);
-			$uibModalInstance.close();
+			if (username){
+				$cookies.put('blocChatCurrentUser', username);
+				$uibModalInstance.close();
+			} else {alert("Please enter a username");}
 		};
 
 	}
