@@ -24,11 +24,24 @@
 			});*/
 	}
 
-
-
+	function BlocChatCookies($cookies, $uibModal){
+		//var currentUser = $cookies.put('blocChatCurrentUser', '');
+		var currentUser = $cookies.get('blocChatCurrentUser');
+		if (!currentUser || currentUser ===''){
+			$uibModal.open({
+				templateUrl: '/templates/usermodal.html',
+				controller: 'UserModalCtrl',
+				size: 'sm',
+				backdrop: 'static'
+			});
+			currentUser = $cookies.get('blocChatCurrentUser');
+		}
+	}
 
 	angular
-		.module("blocChat", ["firebase", "ui.router", "ui.bootstrap"])
-		.config(config);
+		.module("blocChat", ["firebase", "ui.router", "ui.bootstrap", 'ngCookies'])
+		.config(config)
+		.run(['$cookies', '$uibModal', BlocChatCookies]);
+		
 
 })();
