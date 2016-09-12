@@ -1,10 +1,20 @@
-<div class="message-container">
-	<!-- Room Name -->
-	<h2>{{currentRoom.name}}</h2>
+<div>	
+	<div class="message-container">
+		<!-- Room Name -->
+		<h2>{{currentRoom.name}}</h2>
 
-	<!-- Display appropriate room's messages -->
-	<div class="message-body" ng-repeat="message in messageList">
-		<p><strong>{{message.username}}</strong><br>
-		{{message.content}}</p>
+		<!-- Display appropriate room's messages -->
+		<div class="message-body" ng-repeat="message in messageList">
+			<p><strong>{{message.username}}</strong><br>
+			{{message.content}}</p>
+		</div>
+	</div>
+	<div class="new-message">
+	    <div class="input-group input-group-lg">
+	      	<input type="text" class="form-control" placeholder="Enter new message" ng-trim="true" autofocus ng-model="newMessage">
+	      	<span class="input-group-btn">
+	        	<button class="btn btn-success" type="button" ng-click="send(newMessage)">Send</button>
+	      	</span>
+	    </div><!-- /input-group -->
 	</div>
 </div>
